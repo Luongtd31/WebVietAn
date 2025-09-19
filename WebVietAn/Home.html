@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Công Ty Bao Bì</title>
+  <link rel="stylesheet" href="View/css/style.css">
+</head>
+<body>
+  <!-- HEADER -->
+<header>
+  <div class="logo-wrapper">
+    <img src="View/image/vietanlogo.png" alt="Logo Việt An" class="logo-img">
+    <span class="company-name">Công ty Bao Bì Việt An</span>
+  </div>
+  <nav>
+    <ul>
+      <li><a href="#home">Trang chủ</a></li>
+      <li><a href="#about">Giới thiệu</a></li>
+      <li><a href="#products">Sản phẩm</a></li>
+      <li><a href="#news">Tin tức</a></li>
+      <li><a href="#contact">Liên hệ</a></li>
+    </ul>
+  </nav>
+  <div id="menu-toggle">☰</div>
+</header>
+
+  <!-- SLIDER -->
+  <section class="slider" id="home">
+    <div class="slides">
+      <div class="slide" style="background-image:url('https://picsum.photos/id/1062/1920/1080')">
+        <div class="slide-content">
+          <h1>Giải pháp bao bì hiện đại</h1>
+          <p>Sáng tạo – Bền vững – Chất lượng hàng đầu</p>
+          <a href="#products" class="btn">Xem sản phẩm</a>
+        </div>
+      </div>
+      <div class="slide" style="background-image:url('https://picsum.photos/id/1059/1920/1080')">
+        <div class="slide-content">
+          <h1>Đồng hành cùng doanh nghiệp</h1>
+          <p>Đáp ứng mọi nhu cầu đóng gói, từ sản xuất đến phân phối</p>
+          <a href="#about" class="btn">Tìm hiểu thêm</a>
+        </div>
+      </div>
+      <div class="slide" style="background-image:url('https://picsum.photos/id/1011/1920/1080')">
+        <div class="slide-content">
+          <h1>Uy tín & Chất lượng</h1>
+          <p>Khẳng định thương hiệu qua từng sản phẩm</p>
+          <a href="#contact" class="btn">Liên hệ ngay</a>
+        </div>
+      </div>
+    </div>
+    <div class="slider-nav">
+      <span class="dot active"></span>
+      <span class="dot"></span>
+      <span class="dot"></span>
+    </div>
+  </section>
+
+  <!-- ABOUT -->
+  <section class="about" id="about">
+    <h2>Giới thiệu</h2>
+    <p>
+      Công ty Bao Bì chúng tôi chuyên sản xuất thùng carton, túi giấy và các loại bao bì thân thiện môi trường. 
+      Với dây chuyền hiện đại, đội ngũ giàu kinh nghiệm, chúng tôi cam kết mang đến cho khách hàng những giải pháp tối ưu.
+    </p>
+    <div class="grid" style="margin-top:30px;">
+      <div class="card">
+        <img src="https://picsum.photos/id/1005/600/400" alt="Nhà máy">
+        <h3>Nhà máy hiện đại</h3>
+        <p>Dây chuyền sản xuất tiên tiến, công suất lớn.</p>
+      </div>
+      <div class="card">
+        <img src="https://picsum.photos/id/1040/600/400" alt="Đội ngũ">
+        <h3>Đội ngũ chuyên nghiệp</h3>
+        <p>Kỹ thuật viên, công nhân lành nghề, tâm huyết với nghề.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- PRODUCTS -->
+  <section class="products" id="products">
+    <h2>Sản phẩm</h2>
+    <div class="grid">
+      <div class="card">
+        <img src="https://picsum.photos/id/102/600/400" alt="Sản phẩm 1">
+        <h3>Thùng carton</h3>
+        <p>Bảo vệ hàng hóa tối ưu, vận chuyển an toàn.</p>
+      </div>
+      <div class="card">
+        <img src="https://picsum.photos/id/1060/600/400" alt="Sản phẩm 2">
+        <h3>Túi giấy</h3>
+        <p>Thân thiện môi trường, phù hợp bán lẻ & quà tặng.</p>
+      </div>
+      <div class="card">
+        <img src="https://picsum.photos/id/1068/600/400" alt="Sản phẩm 3">
+        <h3>Màng bọc</h3>
+        <p>Bảo quản thực phẩm & hàng hóa hiệu quả.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- NEWS -->
+  <section class="news" id="news">
+    <h2>Tin tức</h2>
+    <div class="grid">
+      <div class="card">
+        <img src="https://picsum.photos/id/1035/600/400" alt="Tin tức 1">
+        <h3>Khai trương nhà máy mới</h3>
+        <p>Nâng cao năng lực sản xuất và đáp ứng nhu cầu thị trường.</p>
+      </div>
+      <div class="card">
+        <img src="https://picsum.photos/id/1047/600/400" alt="Tin tức 2">
+        <h3>Đạt chứng chỉ ISO</h3>
+        <p>Khẳng định chất lượng sản phẩm đạt chuẩn quốc tế.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section class="contact" id="contact">
+    <h2>Liên hệ</h2>
+    <form>
+      <input type="text" placeholder="Họ và tên">
+      <input type="email" placeholder="Email">
+      <textarea placeholder="Nội dung"></textarea>
+      <div class="actions">
+        <button type="submit">Gửi thông tin</button>
+      </div>
+    </form>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <p>&copy; 2025 Công Ty Bao Bì | Thiết kế bởi Nội bộ</p>
+  </footer>
+
+  <script src="js/script.js"></script>
+</body>
+</html>

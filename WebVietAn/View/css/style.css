@@ -1,0 +1,159 @@
+:root{
+  --primary: #ff7b29;  /* CAM trẻ trung - 60% */
+  --secondary: #0077b6; /* XANH biển - 40% */
+  --bg: #fafafa;
+  --card: #ffffff;
+  --text: #333;
+  --muted: #6b6b6b;
+  --radius: 12px;
+  --gap: 24px;
+}
+
+/* RESET */
+*{margin:0;padding:0;box-sizing:border-box}
+body{
+  font-family:'Poppins', Arial, sans-serif;
+  background:var(--bg);
+  color:var(--text);
+  line-height:1.6;
+}
+
+/* HEADER */
+header{
+  background:var(--primary);
+  color:#fff;
+  padding:14px 18px;
+  display:flex;align-items:center;justify-content:space-between;
+  position:sticky;top:0;z-index:1000;
+  box-shadow:0 2px 8px rgba(0,0,0,0.08);
+}
+.logo{font-weight:700;font-size:20px}
+header nav ul{display:flex;gap:20px;list-style:none}
+header nav a{
+  color:#fff;text-decoration:none;font-weight:500;
+  transition:color .2s ease;
+}
+header nav a:hover{color:var(--secondary)}
+#menu-toggle{display:none;font-size:26px;color:#fff;cursor:pointer}
+
+/* SLIDER */
+.slider{position:relative;overflow:hidden;height:100vh;min-height:480px}
+.slides{display:flex;width:300%;transition:transform .8s ease-in-out}
+.slide{
+  width:100%;flex-shrink:0;height:100vh;min-height:480px;
+  background-size:cover;background-position:center;
+  display:flex;align-items:center;justify-content:center;
+  color:#fff;text-align:center;position:relative;
+}
+.slide::after{
+  content:"";position:absolute;inset:0;
+  background:linear-gradient(rgba(255,123,41,0.6), rgba(0,119,182,0.5));
+}
+.slide-content{position:relative;z-index:2;max-width:800px;padding:20px}
+.slide-content h1{font-size:42px;margin-bottom:15px}
+.slide-content p{font-size:18px;margin-bottom:20px}
+.slide-content .btn{
+  background:var(--primary);color:#fff;
+  padding:12px 26px;border-radius:28px;
+  font-weight:600;text-decoration:none;
+  transition:background .2s ease, transform .2s ease;
+}
+.slide-content .btn:hover{background:#e96d20;transform:translateY(-3px)}
+.slider-nav{position:absolute;bottom:25px;left:50%;transform:translateX(-50%);display:flex;gap:10px;z-index:3}
+.dot{width:12px;height:12px;border-radius:50%;background:rgba(255,255,255,0.6);cursor:pointer;transition:background .3s}
+.dot.active{background:var(--secondary)}
+
+/* SECTIONS */
+section{padding:60px 18px}
+h2{font-size:28px;margin-bottom:18px;text-align:center;color:var(--primary)}
+
+/* ABOUT */
+.about p{max-width:900px;margin:0 auto;font-size:16px;color:var(--muted);line-height:1.7}
+
+/* GRID */
+.grid{display:grid;gap:20px;grid-template-columns:repeat(auto-fit,minmax(260px,1fr))}
+.card{
+  background:var(--card);border-radius:var(--radius);overflow:hidden;
+  box-shadow:0 6px 20px rgba(0,0,0,0.05);
+  transition:transform .2s ease, box-shadow .2s ease;
+  display:flex;flex-direction:column;
+}
+.card:hover{transform:translateY(-6px);box-shadow:0 12px 24px rgba(0,0,0,0.08)}
+.card img{width:100%;height:180px;object-fit:cover;display:block}
+.card h3{padding:14px 16px;font-size:18px;color:var(--secondary);font-weight:600}
+.card p{padding:0 16px 20px;font-size:14px;color:var(--muted)}
+
+/* PRODUCTS */
+.products .card:hover h3{color:var(--primary)} 
+
+/* NEWS */
+.news h2{color:var(--secondary)}
+.news .card:hover h3{color:var(--primary)}
+
+/* CONTACT */
+.contact h2{color:var(--primary)}
+.contact form{
+  max-width:940px;margin:0 auto;display:grid;gap:14px;
+  grid-template-columns:1fr;align-items:start;padding:10px
+}
+.contact input,.contact textarea{
+  width:100%;padding:12px 14px;border-radius:8px;
+  border:1px solid #ccc;font-size:15px;color:var(--text);background:#fff;
+  transition:border-color .2s ease, box-shadow .2s ease;
+}
+.contact textarea{min-height:140px;resize:vertical}
+.contact input:focus,.contact textarea:focus{
+  outline:none;border-color:var(--secondary);
+  box-shadow:0 0 0 3px rgba(0,119,182,0.15);
+}
+.contact .actions{display:flex;justify-content:center;margin-top:6px}
+.contact button{
+  background:var(--primary);color:#fff;border:0;padding:12px 22px;
+  border-radius:8px;font-weight:700;cursor:pointer;
+  transition:background .2s ease, transform .2s ease;
+}
+.contact button:hover{background:#e96d20;transform:translateY(-2px)}
+
+/* FOOTER */
+footer{
+  background:var(--primary);color:#fff;text-align:center;
+  padding:20px 18px;margin-top:30px
+}
+footer a{color:var(--secondary);text-decoration:none;font-weight:500}
+footer a:hover{text-decoration:underline}
+
+/* RESPONSIVE */
+@media(max-width:992px){
+  .slide-content h1{font-size:32px}
+  section{padding:40px 14px}
+}
+@media(max-width:768px){
+  header nav{display:none;position:absolute;top:62px;right:18px;background:var(--primary);border-radius:10px;padding:10px;width:220px}
+  header nav.active{display:block}
+  header nav ul{flex-direction:column;gap:8px}
+  #menu-toggle{display:block}
+  .slide-content h1{font-size:26px}
+  .slide-content p{font-size:15px}
+}
+@media(min-width:900px){
+  .contact form{grid-template-columns:1fr 1fr;gap:16px}
+  .contact textarea{grid-column:1/-1}
+  .contact .actions{grid-column:1/-1}
+}
+.logo-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.logo-img {
+  height: 48px; /* bạn chỉnh lại theo tỉ lệ logo */
+  width: auto;
+}
+
+.company-name {
+  font-size: 20px;
+  font-weight: 700;
+  color: #fff; /* màu chữ trắng vì header nền cam */
+  white-space: nowrap;
+}
